@@ -2,8 +2,7 @@ async function convertCurrency(){
     var gbpAmount = document.getElementById("gbpAmount").value
     const apikey = "34281b4ef57bf42fdf228b8f"
     const response = await fetch(`https://v6.exchangerate-api.com/v6/${apikey}/pair/GBP/TRY/${gbpAmount}`);
-    const data=  await response.json()
-
+ const data=  await response.json()
     if(data.result == "success"){
         document.getElementById("result").textContent  = data.conversion_result.toFixed(2) + "TRY"
 
