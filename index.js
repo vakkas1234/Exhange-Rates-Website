@@ -17,7 +17,7 @@ async function click2(){
     const response1  = await fetch(`https://v6.exchangerate-api.com/v6/${apikey1}/pair/TRY/GBP/${tryamount}`);
     const data1=  await response1.json()
     if(data1.result =="success"){
-        document.getElementById("result2").textContent = data1.conversion_result.toFixed(2) + "GBP"
+        document.getElementById("result2").textContent = data1.conversion_result.toFixed(3) + "GBP"
     }
     else{
         document.getElementById("result2").textContent  = "Veri alınamadı"
